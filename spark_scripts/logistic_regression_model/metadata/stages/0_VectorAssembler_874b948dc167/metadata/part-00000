@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.VectorAssembler","timestamp":1703234206339,"sparkVersion":"3.5.0","uid":"VectorAssembler_874b948dc167","paramMap":{"outputCol":"Cfeatures","inputCols":["CarCount","BikeCount","BusCount","TruckCount"]},"defaultParamMap":{"outputCol":"VectorAssembler_874b948dc167__output","handleInvalid":"error"}}

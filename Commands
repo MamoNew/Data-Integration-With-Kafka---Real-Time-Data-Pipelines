@@ -1,0 +1,86 @@
+cd ~/project_directory/producers
+python3 KafkaMessageProducer.py
+
+
+python3 KafkaMessageProducerWithLimit.py
+
+
+cd ~/project_directory/consumers
+python3 UploadDataset_to_kafka_procedure.py
+
+
+cd ~/project_directory/spark_scripts
+spark-submit pullMessage_ML.py
+
+
+spark-submit SparkSQL.py
+
+
+spark-submit structured_streaming.py
+
+
+spark-submit SparkGraphX.py
+
+spark-submit SparkML.py
+
+
+cd ~/project_directory/main
+python mainPage.py
+
+--------------------------------------------------
+http://10.7.254.110:4041/StreamingQuery/statistics/?id=f7506d92-292f-4237-b1aa-1170f0f700d1
+
+------------------------------------------------------------------------------------------
+
+mamo@mamo-HP-EliteBook-840-G1:~/project_directory/producers$ python3 KafkaMessageProducer.py
+------------------------------------------------------------------------------------------
+mamo@mamo-HP-EliteBook-840-G1:~/project_directory/producers$ python3 KafkaMessageProducerWithLimit.py
+------------------------------------------------------------------------------------------
+
+mamo@mamo-HP-EliteBook-840-G1:~/project_directory/consumers$ python3 UploadDataset_to_kafka_procedure.py
+
+------------------------------------------------------------------------------------------
+mamo@mamo-HP-EliteBook-840-G1:~/project_directory/spark_scripts$ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 structured_streaming.py
+
+--------------------------------------------or-----------
+python3 structured_streaming.py
+
+------------------------------------------------------------------------------------------
+
+mamo@mamo-HP-EliteBook-840-G1:~/project_directory/spark_scripts$ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 SparkML.py
+
+------------------------------------------------------------------------------------------
+
+http://10.7.84.111:4041/StreamingQuery/statistics/?id=47bcdbe5-b9fb-4ee1-9f89-68eb81a7a9e9
+
+---------------------------------------------------------------------------------
+mamo@mamo-HP-EliteBook-840-G1:~/kafka$ ./bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+your_consumer_group
+
+-------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
