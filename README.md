@@ -1,6 +1,9 @@
 ## Traffic Data Processing with Kafka and Spark 🚗📊
 
 This project demonstrates a pipeline for real-time traffic data processing using Kafka and Spark. The system includes components for data generation, Kafka message production, Spark Structured Streaming, and Spark ML integration.
+
+------------------------------------------
+This PySpark script establishes a structured streaming pipeline integrated with Kafka for real-time traffic data analysis. The code defines functions for creating a Spark session, training a machine learning model (Logistic Regression in this case), and executing the main data processing logic. It reads static data from a CSV file and streaming data from a Kafka topic, parsing and filtering it based on specified conditions. The machine learning model is either loaded from a saved location or trained on the static and streaming data. Finally, the results are written to the console using structured streaming. The script handles keyboard interruptions to gracefully stop the streaming query.
 -------------------------------------
 ### 1. *Traffic Data Generation 🚦*
 
